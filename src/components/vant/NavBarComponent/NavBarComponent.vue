@@ -1,0 +1,29 @@
+<template>
+  <van-nav-bar
+    :id="navBarStoreState.showNavBarLeft ? 'navBar' : 'navBarNoLeft'"
+    v-show="navBarStoreState.showNavBar"
+    fixed
+    left-text="返回"
+    left-arrow
+    :right-text="navBarStoreState.rightText"
+    placeholder
+    safe-area-inset-top
+    :title="navBarStoreState.title"
+    @click-left="$router.back()"
+    @click-right="navBarStoreState.clickRight"
+  />
+</template>
+<script>
+import { NavBar } from "vant";
+import NavBarStore from "./store/NavBarStore";
+
+export default {
+  name: "NavBarComponent",
+  components: { [NavBar.name]: NavBar },
+  data() {
+    return {
+      navBarStoreState: NavBarStore.state,
+    };
+  },
+};
+</script>

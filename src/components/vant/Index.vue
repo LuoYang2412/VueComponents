@@ -26,6 +26,10 @@
         @confirm="fieldPickerValue = $event"
       />
     </div>
+    <div class="contentBox">
+      NavBar组件
+      <NavBarComponent />
+    </div>
   </div>
 </template>
 
@@ -34,9 +38,16 @@ import FieldDateTimePicker from "@/components/vant/FieldDateTimePicker";
 import FieldPicker from "@/components/vant/FieldPicker";
 import MenuGrid from "@/components/vant/MenuGrid";
 import MySwipe from "@/components/vant/MySwipe";
+import NavBarComponent from "@/components/vant/NavBarComponent/NavBarComponent";
 export default {
   name: "Index",
-  components: { MySwipe, MenuGrid, FieldPicker, FieldDateTimePicker },
+  components: {
+    NavBarComponent,
+    MySwipe,
+    MenuGrid,
+    FieldPicker,
+    FieldDateTimePicker,
+  },
   data() {
     return {
       fieldDateTimePickerValue: undefined,
