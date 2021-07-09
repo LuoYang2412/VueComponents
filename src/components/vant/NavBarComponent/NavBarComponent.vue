@@ -27,3 +27,13 @@ export default {
   },
 };
 </script>
+
+<style>
+#navBarNoLeft .van-nav-bar__left {
+  display: none;
+}
+
+#navBar .van-nav-bar__left {
+  display: flex;
+}
+</style>
