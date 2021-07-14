@@ -17,8 +17,9 @@ export default {
   setClickRight(newValue) {
     this.state.clickRight = newValue;
   },
-  setRightText(newValue) {
+  setRightText(newValue, clickCall) {
     this.state.rightText = newValue;
+    this.state.clickRight = clickCall;
   },
   setShowNavBar(newValue) {
     this.state.showNavBar = newValue;
