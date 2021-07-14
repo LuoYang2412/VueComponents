@@ -14,20 +14,17 @@ export default {
     this.state.showNavBarLeft = true;
     this.state.title = "标题";
   },
-  setClickRight(newValue) {
-    this.state.clickRight = newValue;
-  },
-  setRightText(newValue, clickCall) {
-    this.state.rightText = newValue;
+  setRightText(text, clickCall) {
+    this.state.rightText = text;
     this.state.clickRight = clickCall;
   },
-  setShowNavBar(newValue) {
-    this.state.showNavBar = newValue;
+  setNavBarShow(show) {
+    this.state.showNavBar = show;
   },
-  setShowNavBarLeft(newValue) {
-    this.state.showNavBarLeft = newValue;
+  setNavBarLeftShow(show) {
+    this.state.showNavBarLeft = show;
   },
-  setTitle(newValue) {
-    this.state.title = newValue;
+  setTitle(text) {
+    this.state.title = text;
   },
 };
