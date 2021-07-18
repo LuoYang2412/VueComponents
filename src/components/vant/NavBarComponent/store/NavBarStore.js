@@ -1,3 +1,8 @@
+/**
+ * @Author: LuoYang
+ * @Date: 2021/7/14 3:34 下午
+ * @Description: NavBarStore
+ */
 export default {
   debug: true,
   state: {
@@ -7,7 +12,7 @@ export default {
     showNavBarLeft: true,
     title: "标题",
   },
-  reSetStateValue() {
+  reSetNavBar() {
     this.state.clickRight = function () {};
     this.state.rightText = undefined;
     this.state.showNavBar = true;
@@ -16,7 +21,9 @@ export default {
   },
   setRightText(text, clickCall) {
     this.state.rightText = text;
-    this.state.clickRight = clickCall;
+    if (clickCall) {
+      this.state.clickRight = clickCall;
+    }
   },
   setNavBarShow(show) {
     this.state.showNavBar = show;
